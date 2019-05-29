@@ -14,3 +14,12 @@ export const removeSNames = names => {
 export const removeNum = nums => {
     return nums.filter(num => num < 100)
 }
+
+// High order map function example
+// Should accumulate total cost of items
+// Should not return a float
+
+export const totalCost = items => {
+    return items.reduce((total, amount) => total + amount);
+
+}
