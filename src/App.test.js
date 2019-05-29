@@ -1,4 +1,4 @@
-import { hello, add, removeSNames } from './App';
+import { hello, add, removeSNames, removeNum } from './App';
 
 describe('hello', () => {
     it('testing hello output', () => {
@@ -27,7 +27,7 @@ describe('add', () => {
 
 describe('Removing all S names', () => {
     let names = ['Scott', 'Val', 'scott'];
-    
+
     it('should remove all Snames', () => {
         expect(removeSNames(names)).not.toContain('Scott', 'scott');
     })
@@ -36,5 +36,12 @@ describe('Removing all S names', () => {
     })
     it('should account for case', () => {
         expect(removeSNames(names)).toContain('Val');
+    })
+})
+
+describe('Testing removeNum functionality', () => {
+    let nums = [80,90,100,110,120]
+    it('should remove all number greater than or equal to 100', () => {
+        expect(removeNum(nums)).toContain(80,90);
     })
 })
