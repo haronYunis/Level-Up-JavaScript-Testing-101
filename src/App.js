@@ -10,7 +10,7 @@ export const removeSNames = names => {
     return names.filter(name => name.toLowerCase().charAt(0) !== 's')
 }
 
-// Create a function that removes all elements that are greater than 60 out if an array of integers
+// Create a function that removes all elements that are greater than 100 out if an array of integers
 export const removeNum = nums => {
     return nums.filter(num => num < 100)
 }
@@ -22,4 +22,9 @@ export const removeNum = nums => {
 export const totalCost = items => {
     return items.reduce((total, amount) => total + amount);
 
+}
+
+//Create the next function to be tested using map.
+export const doubleInt = (arr) => {
+    return arr.map(num => num + num);
 }

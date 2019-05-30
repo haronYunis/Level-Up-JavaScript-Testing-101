@@ -1,4 +1,4 @@
-import { hello, add, removeSNames, removeNum, totalCost } from './App';
+import { hello, add, removeSNames, removeNum, totalCost, doubleInt } from './App';
 // Testing to check if hello function => 'hello'
 describe('hello', () => {
     it('testing hello output', () => {
@@ -42,7 +42,7 @@ describe('Removing all S names', () => {
         expect(removeSNames(names)).toContain('Val');
     })
 })
-// Should remove all numbers greater or equal to 100
+// Should remove all numbers greater than 100
 describe('Testing removeNum functionality', () => {
     let nums = [80, 90, 100, 110, 120]
     it('should remove all number greater than or equal to 100', () => {
@@ -57,5 +57,12 @@ describe('Testing totalCost function', () => {
     })
     it('should not return undefined', () => {
         expect(totalCost(items)).not.toBeUndefined()
+    })
+})
+
+describe('Testing doubleInt function', () => {
+    let testArr = [10,15,25];
+    it('checking if doubling function is working', () => {
+        expect(doubleInt(testArr)).toEqual([20,30,50])
     })
 })
